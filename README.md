@@ -9,4 +9,4 @@ This is a NextJS project that has a MongoDB backend with an OpenAI embeddings an
 3. Make sure QDrant is running on `localhost:6333` ([Docker container instructions](https://github.com/qdrant/qdrant-js?tab=readme-ov-file#usage))
 4. Replace OpenAI API key with your own, change `env.example` to `.env`
 5. Run `npx tsx scripts/seed.ts` to seed your databases (Mongo + Qdrant)
-6. 
+6. Run `bun run dev` to start the server
