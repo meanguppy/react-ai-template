@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Vacation Policy",
+    "body": "Employees receive 15 days of paid vacation annually.",
+    "department": "HR",
+    "doc_type": "policy"
+  },
+  {
+    "title": "Parental Leave",
+    "body": "Parental leave provides up to 12 weeks of paid time off.",
+    "department": "HR",
+    "doc_type": "policy"
+  },
+  {
+    "title": "Password Reset",
+    "body": "Go to the IT portal to reset your password securely.",
+    "department": "IT",
+    "doc_type": "faq"
+  }
+]
