@@ -41,7 +41,7 @@ async function run() {
 
     await collection.insertOne({ ...doc, qdrant_id: id });
 
-    await qdrant.upsert("docs", {
+    await qdrant.upsert(process.env.QDRANT_COLLECTION_NAME!, {
       points: [
         {
           id,
