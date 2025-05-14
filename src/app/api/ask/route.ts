@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   const { query }: { query: string } = await request.json();
 
   const embedRes = await openai.embeddings.create({
-    model: "text-embedding-ada-002",
+    model: process.env.OPENAI_EMBEDDING_MODEL!,
     input: query,
   });
 
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
   const context = docs.map((d) => d.body).join("\n\n");
 
   const chatRes = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: process.env.OPENAI_CHAT_MODEL!,
     messages: [
       { role: "system", content: "You are a helpful HR assistant." },
       {

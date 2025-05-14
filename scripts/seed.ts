@@ -33,7 +33,7 @@ async function run() {
     const id = uuidv4();
     const content = `${doc.title}\n\n${doc.body}`;
     const embedding = await openai.embeddings.create({
-      model: "text-embedding-ada-002",
+      model: process.env.OPENAI_EMBEDDING_MODEL!,
       input: content,
     });
 
