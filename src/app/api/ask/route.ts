@@ -25,12 +25,13 @@ export async function POST(request: NextRequest) {
   const result = await qdrant.search(process.env.QDRANT_COLLECTION_NAME!, {
     vector,
     limit: 3,
-    filter: {
-      must: [
-        { key: "department", match: { value: "HR" } },
-        { key: "doc_type", match: { value: "policy" } },
-      ],
-    },
+    /* If you want to look up speciifc departments or doc_types */
+    // filter: {
+    //   must: [
+    //     { key: "department", match: { value: "HR" } },
+    //     { key: "doc_type", match: { value: "policy" } },
+    //   ],
+    // },
   });
 
   const ids = result.map((r) => r.id.toString());
